@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         height: 10,
         minHeight: 10,
         minWidth: 10,
-        border: '1px solid black',
+        border: '2px solid black',
         marginHorizontal: 3,
         marginTop: 1,
     }, 

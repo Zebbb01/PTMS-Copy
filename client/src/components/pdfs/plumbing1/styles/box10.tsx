@@ -2,7 +2,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     container: {
-        border: '1px solid black',
+        border: '2px solid black',
         padding: 5,
     },
     title: {

@@ -3,6 +3,13 @@ import styles from '../styles/box4'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <>
             {/* Title Section */}
@@ -22,7 +29,9 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
             <View style={styles.container2}>
                 <View style={styles.scopeColumn4}>
                         <View style={styles.rowOption}>
-                            <View style={styles.boxColumn}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             {/* Check NEW CONSTRUCTION box here */}
                             <Text style={styles.box4label2}>PROFESSIONAL MECHANICAL ENGINEER</Text>
                         </View>
@@ -30,7 +39,9 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
 
                 <View style={styles.scopeColumn5}>
                         <View style={styles.rowOption}>
-                            <View style={styles.boxColumn}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             {/* Check NEW CONSTRUCTION box here */}
                             <Text style={styles.box4label2}>MECHANICAL ENGINEER</Text>
                         </View>
@@ -39,11 +50,13 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.row2}>
                         {/* Master Plumber label and line */}
                         <View style={styles.textLineContainer}>
-                            <View style={styles.line}></View>
+                            <Text style={styles.line}>{data.labelData || ' '}</Text>
                             <Text style={styles.labelOnLine}>PROFESSIONAL MECHANICAL ENGINEER</Text>
                             <Text style={styles.labelOnLine3}>(signed and sealed over printed name)</Text>
-                            <Text style={styles.labelOnLine2}>Date</Text>
-                            <View style={styles.line2}></View>
+                            <View style={styles.row}>
+                                <Text style={styles.labelOnLine2}>Date</Text>
+                                <Text style={styles.lineDate}>{data.labelData || ' '}</Text>
+                            </View>
                             </View>
                     </View>
                 </View>
@@ -53,6 +66,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
             {/* Row Box 3 */}
             <View style={styles.container3}>
                 <Text style={styles.infoText}>ADDRESS </Text>
+                <Text style={styles.data}>{data.labelData || ' '}</Text>
             </View>
             {/* End of Row Box 3 */}
 
@@ -61,6 +75,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.row3}>
                     <View style={styles.prcContainer}>
                         <Text style={styles.infoText2}>PRC NO.</Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                     
                     {/* Vertical Line */}
@@ -68,6 +83,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer}>
                         <Text style={styles.infoText3}>VALIDITY</Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                 </View>
             </View>
@@ -78,6 +94,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.row3}>
                     <View style={styles.prcContainer2}>
                         <Text style={styles.infoText2}>PTR NO.</Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                     
                     {/* Vertical Line */}
@@ -85,6 +102,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer2}>
                         <Text style={styles.infoText3}>DATE ISSUED</Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                 </View>
             </View>
@@ -95,6 +113,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.row3}>
                     <View style={styles.prcContainer3}>
                         <Text style={styles.infoText2}>ISSUED AT</Text>
+                        <Text style={styles.dataText2}>{data.labelData || ' '}</Text>
                     </View>
                     
                     {/* Vertical Line */}
@@ -102,6 +121,7 @@ export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer3}>
                         <Text style={styles.infoText4}>TIN </Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                 </View>
             </View>

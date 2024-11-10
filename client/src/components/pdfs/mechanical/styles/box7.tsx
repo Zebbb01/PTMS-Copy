@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 3,
         padding: 2,
-        border: '1px solid black',
+        border: '2px solid black',
         borderTop: 'none',
         textAlign: 'left',
         fontSize: 7,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '100%',
         padding: 2,
-        border: '1px solid black',
+        border: '2px solid black',
         fontSize: 7,
         marginBottom: -5,
     },
@@ -83,35 +83,37 @@ const styles = StyleSheet.create({
         width: '30%', // Adjust width for each column
     },
     rowOption: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 2, 
     },
-    boxColumn: {
-        width: 8,
-        height: 8,
-        minHeight: 8,
-        minWidth: 8,
-        border: '1px solid black',
-        marginHorizontal: 8,
+    checkBox: {
+        width: 10,
+        height: 10,
+        minHeight: 10,
+        minWidth: 10,
+        border: '2px solid black',
+        marginHorizontal: 3,
+        marginTop: 1,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
+
     box4label2: {
-        width: '100%',
         fontSize: 6,
     },
-    boxLabelLine: {
+    blankLineData: {
         width: 90,
-        backgroundColor: 'black',
-        marginTop: 8,
-        height: 1,
-        marginLeft: -55,
-    },
-    boxLabelLine2: {
-        width: 90,
-        backgroundColor: 'black',
-        marginTop: 8,
-        height: 1,
-        marginLeft: -55,
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
+        borderBottomWidth: 1,
     },
     
 });

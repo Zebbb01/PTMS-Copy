@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         paddingLeft: 5,
-        border: '1px solid black',
+        border: '2px solid black',
         borderBottom: 'none',
         flexDirection: 'column',
         fontSize: 6,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     container2: {
         width: '100%',
         paddingLeft: 5,
-        border: '1px solid black',
+        border: '2px solid black',
         flexDirection: 'column',
         fontSize: 6,
         paddingBottom: 5,
@@ -115,17 +115,17 @@ const styles = StyleSheet.create({
     },
     subRow: {
         width: "80%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     subRow2: {
         width: "66.6%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     subRow3: {
         width: "100%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
         height: 10,
         minHeight: 10,
         minWidth: 10,
-        border: '1px solid black',
+        border: '2px solid black',
         marginHorizontal: 3,
         marginTop: 1,
     }, 
@@ -192,6 +192,11 @@ const styles = StyleSheet.create({
         height: 20, // Adjust height as needed
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    cellData: {
+        fontSize: 10,
+        textAlign: 'center',
+        color: '#FF0000',
     },
 
     

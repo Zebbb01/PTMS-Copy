@@ -78,8 +78,10 @@ const styles = StyleSheet.create({
         paddingTop: 5,
     },
     row: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
     },
     row2: {
         flexDirection: 'row',
@@ -110,17 +112,45 @@ const styles = StyleSheet.create({
         width: '80%', // Ensures the text is centered relative to the line
     },
     line: {
-        left: 25,
-        width: '80%',
-        height: 1, // thickness of the line
-        backgroundColor: 'black',
-        marginTop: 25, // Space above the line to ensure text fits properly
+        width: '95%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+        marginTop: 20, // Space above the line to ensure text fits properly
+    },
+    labelOnLine2: {
+        width: '5%', // Ensures the text is centered relative to the line
+        marginTop: 5,
+        fontSize: 6,
+        textAlign: 'center',
+        fontWeight: 'bold',
     },
     lineDate: {
-        left: 110,
-        width: '20%',
-        height: 1, // thickness of the line
-        backgroundColor: 'black',
+        width: '30%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 8,
+        borderBottomWidth: 1,
+        marginTop:3,
+    },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
+    },
+    dataText:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
+         left: 30,
     },
     verticalLine: {
         width: 1,
@@ -128,8 +158,9 @@ const styles = StyleSheet.create({
         height: 13,
     },
     textLineContainer: {
-        position: 'relative', // Ensures lines are positioned relative to text
         width: '100%', // Ensures consistent width for alignment
+        justifyContent: 'center', // Center the text
+        alignItems: 'center', // Center the text
     },
     prcContainer: {
         flexGrow: 1, // Allow it to take the necessary space

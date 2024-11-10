@@ -90,23 +90,32 @@ const styles = StyleSheet.create({
     rowOption: {
         flexDirection: 'row',
     },
-    boxColumn: {
-        width: 8,
-        height: 8,
-        minHeight: 8,
-        minWidth: 8,
-        border: '1px solid black',
-        marginRight: 5, // Add margin to the right of the box to create space
+    checkBox: {
+        width: 10,
+        height: 10,
+        minHeight: 10,
+        minWidth: 10,
+        border: '2px solid black',
+        marginHorizontal: 3,
+        marginTop: 1,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
     
     box4label2: {
         width: '45%',
         fontSize: 5,
-        marginTop: 2,
+        marginTop: 3.5,
     },
     row: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
     },
     row2: {
         flexDirection: 'row',
@@ -142,11 +151,11 @@ const styles = StyleSheet.create({
         width: '90%', // Ensures the text is centered relative to the line
     },
     labelOnLine2: {
+        width: '5%', // Ensures the text is centered relative to the line
         marginTop: 5,
         fontSize: 6,
         textAlign: 'center',
         fontWeight: 'bold',
-        width: '60%', // Ensures the text is centered relative to the line
     },
     labelOnLine3: {
         fontSize: 6,
@@ -155,16 +164,43 @@ const styles = StyleSheet.create({
     },
     line: {
         width: '95%',
-        height: 1, // thickness of the line
-        backgroundColor: 'black',
-        marginTop: 30, // Space above the line to ensure text fits properly
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+        marginTop: 20, // Space above the line to ensure text fits properly
     },
-    line2: {
-        width: '25%',
-        height: 1,
-        backgroundColor: 'black',
-        marginLeft: 85, // Space between the line and the text
-        marginBottom: 5,
+    lineDate: {
+        width: '30%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 8,
+        borderBottomWidth: 1,
+        marginTop:3,
+    },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
+    },
+    dataText:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+    },
+    dataText2:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         left: 48,
     },
     verticalLine: {
         width: 1,
@@ -183,9 +219,9 @@ const styles = StyleSheet.create({
         position: 'absolute', // Ensures lines are positioned relative to text
     },
     textLineContainer: {
-        position: 'relative', // Ensures lines are positioned relative to text
         width: '100%', // Ensures consistent width for alignment
-        marginLeft: 10, // Space between text and the next element
+        justifyContent: 'center', // Center the text
+        alignItems: 'center', // Center the text
     },
     prcContainer: {
         flexGrow: 1, // Allow it to take the necessary space

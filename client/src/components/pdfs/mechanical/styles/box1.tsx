@@ -62,13 +62,7 @@ const styles = StyleSheet.create({
     boxStyleContainer: {
         flexDirection: 'row',
         width: '100%',
-        marginBottom: 20,
-    },
-
-    boxStyleContainer2: {
-        flexDirection: 'row',
-        width: '100%',
-        marginBottom: 2,
+        marginBottom: 10,
     },
     boxStyleContainer4: {
         justifyContent: 'center',
@@ -100,41 +94,55 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '100%',
     },
+    blankLine: {
+        width: '60%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+    },
+    blankLineData: {
+        width: 50,
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
+        borderBottomWidth: 1,
+        marginRight: 20,
+    },
+    blankLineData2: {
+        width: '50%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 8,
+        borderBottomWidth: 1,
+        right: 20,
+    },
     dateText: {
         width: '50%',
         alignItems: 'flex-start',
+        flexDirection: 'column',
     },
     dateText1: {
         width: '50%',
         alignItems: 'flex-end',
     },
     dateLabel: {
+        width: '60%',
         fontSize: 8,
         textAlign: 'center',
-        borderTop: '1px solid black',
         paddingVertical: 2,
-        paddingHorizontal: 50,
     },
     dateLabel2: {
+        width: '60%',
         fontSize: 8,
         textAlign: 'center',
-        borderTop: '1px solid black',
         paddingVertical: 2,
-        paddingHorizontal: 63,
     },
     container: {
         width: '100%',
-        padding: 4,
-        paddingBottom: 8,
-        border: '2px solid black',
-        borderBottom: 'none',
-        flexDirection: 'column',
-        fontSize: 6,
-    },
-    container4: {
-        width: '100%',
-        padding: 4,
-        paddingBottom: 14,
+        paddingLeft: 5,
         border: '2px solid black',
         borderBottom: 'none',
         flexDirection: 'column',
@@ -163,114 +171,83 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     row: {
+        
         flexDirection: 'row',
+    },
+    subRow1: {
+        width: "60%",
+        flexDirection: 'row',
+    },
+    subRow: {
+        width: "80%",
+        borderLeft: '2px solid black',
+        paddingLeft: 10,
+    },
+    subRow2: {
+        width: "66.6%",
+        borderLeft: '2px solid black',
+        paddingLeft: 10,
+    },
+    subRow3: {
+        width: "80%",
+        borderLeft: '2px solid black',
+        paddingLeft: 10,
     },
     column: {
         flexDirection: 'column',
-        alignItems: 'flex-start',
     },
     columnBox: {
         flexDirection: 'column',
         alignItems: 'flex-start',
     },
     rowOption: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 1,
     },
     rowOption2: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 1,
     },
-    rowOption3: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginVertical: 1,
-    },
+ 
     scopeOfWorkRow: {
         flexDirection: 'row',
         marginLeft: 10,
-        justifyContent: 'space-between', // Space between the two columns
         width: '100%',
     },
     scopeColumn: {
         flexDirection: 'column',
-        width: '40%', // Adjust width for each column
+        width: '100%', // Adjust width for each column
     },
-    scopeColumn2: {
+    scopeColumn1: {
         flexDirection: 'column',
-        width: '30%', // Adjust width for each column
-    },
-    scopeColumn3: {
-        flexDirection: 'column',
-        width: '30%', // Adjust width for each column
-    },
-    scopeColumn4: {
-        flexDirection: 'column',
-        width: '30%', // Adjust width for each column
-    },
-    scopeColumn5: {
-        flexDirection: 'column',
-        width: '30%', // Adjust width for each column
-    },
-    scopeColumn6: {
-        flexDirection: 'column',
-        width: '40%', // Adjust width for each column
+        width: '70%', // Adjust width for each column
     },
     
     label: {
-        width: '30%',
         fontSize: 6,
+        flexGrow: 1,
+        width: '100%',
     },
-    label2: {
-        width: '30%',
-        fontSize: 6,
-
+    labelData: {
+        flexGrow: 1,
+        width: '100%',
+        color: '#FF0000',
+        fontSize: 8,
     },
     label3: {
         textAlign: 'right',
         width: '90%',
         fontSize: 6,
-        bottom: 6,
     },
-    rowlabel: {
-        width: '30%',
+    labelData2: {
+        textAlign: 'right',
+        width: '90%',
         fontSize: 6,
-
-    },
-    rowlabel2: {
-        width: '30%',
-        fontSize: 6,
- 
-
-    },
-    rowlabel6: {
-        width: '20%',
-        fontSize: 8,
-    },
-    box2label: {
-        width: '30%',
-        fontSize: 6,
-
-    },
-    box2label2: {
-        width: '30%',
-        fontSize: 6,
- 
-    },
-    box2label3: {
-        width: '30%',
-        fontSize: 6,
-    },
-    box3label: {
-        width: '30%',
-        fontSize: 6,
-
-    },
-    box3label2: {
-        width: '30%',
-        fontSize: 6,
+        color: '#FF0000',
     },
     box4label: {
         width: '30%',
@@ -278,25 +255,27 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 2,
     },
-    box4label2: {
-        width: '50%',
+    box4label1: {
+        width: '100%',
         fontSize: 5,
     },
-    boxColumn: {
-        width: 10,
-        height: 8,
-        minHeight: 8,
-        minWidth: 10,
-        border: '1px solid black',
-        marginHorizontal: 4,
+    box4label2: {
+        fontSize: 5,
     },
-    boxColumn2: {
+    checkBox: {
         width: 10,
-        height: 8,
-        minHeight: 8,
+        height: 10,
+        minHeight: 10,
         minWidth: 10,
-        border: '1px solid black',
-        marginHorizontal: 6,
+        border: '2px solid black',
+        marginHorizontal: 3,
+        marginTop: 1,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
     line: {
         position: 'absolute',
@@ -339,70 +318,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    underline: {
-        width: '50%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 38,
-    },
-    underline2: {
-        width: '45%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 38,
-    },
-    underline3: {
-        width: '69%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 38,
-    },
-    underline4: {
-        width: '65%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 38,
-    },
-
-    underline5: {
-        width: '190%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 20,
-    },
-    underline6: {
-        width: '140%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 20,
-    },
-    underline7: {
-        width: '38%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 20,
-    },
-    underline8: {
-        width: '105%', // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 20,
+    cellData: {
+        fontSize: 10,
+        textAlign: 'center',
+        color: '#FF0000',
     },
     box6label: {
         fontSize: 8,
@@ -418,28 +337,13 @@ const styles = StyleSheet.create({
         width: '50%', // Adjust width as needed for even columns
     },
     checkboxRow: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 1,
     },
-    checkbox: {
-        width: 10,
-        height: 8,
-        minwidth: 10,
-        minheight: 8,
-        border: '1px solid black',
-        marginRight: 6,
-    },
-    checkbox2: {
-        width: 25,
-        height: 8,
-        minwidth: 25,
-        minheight: 8,
-        border: '1px solid black',
-        marginRight: 6,
-    },
     checkboxLabel: {
-        width: '100%',
+        width: '30%',
         fontSize: 6,
     },
     underlineBox6: {

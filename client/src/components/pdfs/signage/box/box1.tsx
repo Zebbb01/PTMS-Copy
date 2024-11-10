@@ -79,7 +79,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.column}>
                         <Text style={styles.columnTitle}>RENEWAL</Text>
                         <View style={styles.checkboxItem}>
-                            <View style={styles.checkBox}>
+                        <View style={styles.checkBox}>
                             <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
                         </View>
                             <Text style={styles.label}>Notarized Application Letter (1 copy)</Text>

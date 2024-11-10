@@ -2,7 +2,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     container: {
-        border: '1px solid black',
+        border: '2px solid black',
         padding: 5,
     },
     title: {
@@ -70,12 +70,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontStyle: 'italic',
     },
-    underline: {
-        width: 100,
-        marginTop: 5,
-        height: 1,
-        backgroundColor: 'black',
-        marginHorizontal: 2,
+    blankLineDate: {
+        width: 90,
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
     },
     footerContainer: {
         marginTop: 1,

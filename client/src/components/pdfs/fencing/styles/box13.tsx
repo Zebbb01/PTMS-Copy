@@ -11,8 +11,22 @@ const styles = StyleSheet.create({
         marginBottom: 15,
     },
     dateRow: {
+        width: '100%',
+        flexDirection: 'row',
         textAlign: 'right',
         marginBottom: 15,
+    },
+    dateLabel: {
+        fontSize: 10,
+        textAlign: 'right',
+        width: '100%',
+    },
+    blankLine: {
+        width: '15%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 8,
+        borderBottomWidth: 1,
     },
     recipient: {
         fontSize: 10,
@@ -21,19 +35,20 @@ const styles = StyleSheet.create({
         lineHeight: 1.5,
     },
     bodyContainer: {
+        width: '100%',
         fontSize: 10,
         marginTop: 15,
         marginBottom: 15,
     },
     lineGroup: {
+        width: '100%',
         flexDirection: 'row',
-        alignItems: 'center',
         marginTop: 15,
     },
     label: {
         fontSize: 10,
         textAlign: 'right',
-        width: '7%',
+        width: '20%',
     },
     label2: {
         fontSize: 10,
@@ -41,22 +56,32 @@ const styles = StyleSheet.create({
         width: '19%',
     },
     line: {
+        width: '60%',
+        color: '#FF0000',
         textAlign: 'center',
+        fontSize: 10,
         borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        flexGrow: 1,
+        paddingLeft: 5,
+    },
+    signatureLine: {
+        width: '100%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 10,
+        borderBottomWidth: 1,
         paddingLeft: 5,
     },
     subGroup: {
+        width: '100%',
         flexDirection: 'row',
-        alignContent: 'space-between',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
 
     },
     subLabel: {
         fontSize: 10,
-        width: '27%',
+        width: '30%',
         marginBottom: 10,
+        left: 75,
     },
     subLabel2: {
         fontSize: 10,
@@ -96,7 +121,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     underlineData: {
-        textDecoration: 'underline',
+        width: '100%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 10,
+        borderBottomWidth: 1,
+        paddingLeft: 5,
     },
 });
 

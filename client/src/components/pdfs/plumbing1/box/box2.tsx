@@ -7,7 +7,7 @@ export function PermitBodyBox2({ permitInfo }: { permitInfo: any }) {
     // Dummy static data
     const defaultData = {
         labelData: 'John ',
-        checkboxData: 'yes',
+        checkboxData: 'Y',
     };
 
     const data = { ...defaultData, ...permitInfo };
@@ -68,49 +68,127 @@ export function PermitBodyBox2({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                     <View style={styles.columnBox}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnBox2}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnBox3}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnLabel}>
                         <Text style={styles.columnLabelText}>Water Closet</Text>
@@ -146,50 +224,130 @@ export function PermitBodyBox2({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                     <View style={styles.columnBox}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnBox2}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnBox3}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                     </View>
                     <View style={styles.columnLabel}>
                         <Text style={styles.columnLabelText}>Bidet</Text>
@@ -226,15 +384,21 @@ export function PermitBodyBox2({ permitInfo }: { permitInfo: any }) {
                 </View>
                 <View style={styles.row}>
                     <View style={styles.lastContainer}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                         <Text style={styles.lastText}>Water Distribution</Text>
                     </View>
                     <View style={styles.lastContainer}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                         <Text style={styles.lastText}>Sanitary Sewer System</Text>
                     </View>
                     <View style={styles.lastContainer}>
-                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <View style={styles.checkBox}>
+                            <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        </View>
                         <Text style={styles.lastText}>Storage Drainage System</Text>
                     </View>
                 </View>

@@ -39,64 +39,26 @@ const styles = StyleSheet.create({
         fontSize: 8,
     },
     labelRow: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 8,
     },
-    line: {
-        width: '71%', // Adjust width for desired line length
+    blankLine: {
+        width: '48%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
         borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
     },
-    line2: {
-        width: '85%', // Adjust width for desired line length
+    blankLine2: {
+        width: '100%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
         borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    line3: {
-        width: '60%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    line4: {
-        width: '75%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    line5: {
-        width: '65%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    line6: {
-        width: '47%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    line7: {
-        width: '43.5%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginLeft: 5, // Space between label and line
-        marginTop: 8,
-    },
-    underline: {
-        width: '99%', // Adjust width for desired line length
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        marginVertical: 10, // Space between label and line
     },
 });
 

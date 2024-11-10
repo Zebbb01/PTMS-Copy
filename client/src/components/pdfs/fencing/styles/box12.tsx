@@ -68,22 +68,24 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     italicNoteUnderline: {
-        borderBottom: '1px solid black',
+        borderBottom: '2px solid black',
         fontSize: 7,
         fontStyle: 'italic',
     },
     italicCorporationUnderline: {
-        borderBottom: '1px solid black',
+        borderBottom: '2px solid black',
         fontSize: 7,
         fontStyle: 'italic',
         marginLeft: 10,
     },
     item: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         marginBottom: 2,
     },
     itemFooter: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'flex-start',
         marginTop: 10,
@@ -94,13 +96,20 @@ const styles = StyleSheet.create({
         marginBottom: 3,
         marginLeft: 10,
     },
-    checkbox: {
+    checkBox: {
         width: 10,
         height: 7,
         minHeight: 7,
         minWidth: 10,
         border: '1px solid black',
-        marginHorizontal: 6,
+        marginHorizontal: 3,
+        marginTop: 1,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 6,               // Adjust the font size as needed
+        paddingLeft: 2,     // Center text horizontally
     },
     itemNumber: {
         fontSize: 7,
@@ -111,8 +120,12 @@ const styles = StyleSheet.create({
         fontSize: 7,
         textAlign: 'justify',
     },
+    itemTextFooter: {
+        fontSize: 7,
+        textAlign: 'justify',
+    },
     itemTextBrgy: {
-        borderBottom: '1px solid black',
+        borderBottom: '2px solid black',
         width: '60%',
         fontSize: 7,
         textAlign: 'justify',
@@ -140,12 +153,21 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: 'black',
     },
-    underline: {
+    blankLine: {
+        width: '800%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 7,
         borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        width: '500%',
-        paddingTop: 7,
-        right: 10,
+    },
+    blankLineFooter: {
+        width: '80%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 7,
+        borderBottomWidth: 1,
     },
     checklistUnderline: {
         borderBottomWidth: 1,

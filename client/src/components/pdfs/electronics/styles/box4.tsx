@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
    
     container: {
         width: '100%',
-        border: '1px solid black',
+        border: '2px solid black',
         borderBottom:'none',
         fontSize: 6,
     },
     containerLast: {
         width: '100%',
-        border: '1px solid black',
+        border: '2px solid black',
         fontSize: 6,
     },
     columnInfo: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         paddingLeft: 5,
-        borderRight: '1px solid black',
+        borderRight: '2px solid black',
     },
 
     row: {

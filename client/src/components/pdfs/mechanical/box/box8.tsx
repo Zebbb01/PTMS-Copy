@@ -3,6 +3,13 @@ import styles from '../styles/box8'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.mainContainer}>
             {/* Title Section */}
@@ -62,28 +69,36 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
                     
                 </View>
@@ -101,28 +116,36 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
                     
                 </View>
@@ -140,28 +163,36 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                 </View>
@@ -179,14 +210,18 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.dividerLine} />
 
                 <View style={styles.columnContainer}>
-                    <Text style={styles.centerText}></Text>
+                    <Text style={styles.centerText}>
+                        
+                    </Text>
                 </View>
                 
                 {/* Vertical Line */}
                 <View style={styles.dividerLine} />
                 
                 <View style={styles.columnContainer}>
-                    <Text style={styles.centerText}></Text>
+                    <Text style={styles.centerText}>
+                        
+                    </Text>
                 </View>
 
                 {/* Vertical Line */}
@@ -202,7 +237,9 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.noLine} />
                 
                 <View style={styles.columnContainer3}>
-                    <Text style={styles.centerText}></Text>
+                    <Text style={styles.centerText}>
+                        
+                    </Text>
                 </View>
             </View>
         </View>

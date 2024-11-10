@@ -3,6 +3,13 @@ import styles from '../styles/box7'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <>
             {/* Title Section */}
@@ -37,12 +44,16 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>MECHANICAL PLANS AND SPECIFICATION</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>COST ESTIMATES</Text>
                                 </View>
@@ -63,16 +74,20 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn3}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>BILL OF MATERIALS</Text>
-                                    <View style={styles.boxLabelLine} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>OTHERS (SPECIFY)</Text>
-                                    <View style={styles.boxLabelLine2} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                             </View>
                     </View>

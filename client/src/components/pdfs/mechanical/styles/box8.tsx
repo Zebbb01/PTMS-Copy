@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 2,
         border: '2px solid black',
-        borderTop: '1px solid black',
+        borderTop: '2px solid black',
         fontSize: 7,
         textAlign: 'center',
     },
@@ -140,6 +140,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         minHeight: 8, // Sets a minimum height to prevent collapsing
     },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+    },
+    
     leftText: {
         paddingTop: 0,
         fontSize: 6,

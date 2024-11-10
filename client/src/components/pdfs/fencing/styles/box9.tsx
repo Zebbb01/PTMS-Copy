@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 2,
         border: '2px solid black',
-        borderTop: '1px solid black',
+        borderTop: '2px solid black',
         fontSize: 7,
         textAlign: 'center',
     },

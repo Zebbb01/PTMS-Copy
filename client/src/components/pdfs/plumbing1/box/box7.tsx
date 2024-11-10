@@ -6,7 +6,7 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
     // Dummy static data
     const defaultData = {
         labelData: 'John A. Doe',
-        checkboxData: 'yes',
+        checkboxData: 'Y',
     };
 
     const data = { ...defaultData, ...permitInfo };
@@ -45,15 +45,15 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}>
-                                        {data.checkboxData || ' '}
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
                                     </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>Plumbing Plans & Specifications</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}>
-                                        {data.checkboxData || ' '}
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
                                     </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>Bill of Materials </Text>
@@ -66,15 +66,15 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}>
-                                        {data.checkboxData || ' '}
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
                                     </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>Cost Estimates</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}>
-                                        {data.checkboxData || ' '}
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
                                     </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>Others (Specify)</Text>

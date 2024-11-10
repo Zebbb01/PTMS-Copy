@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 3,
         padding: 2,
-        border: '1px solid black',
+        border: '2px solid black',
         borderTop: 'none',
         textAlign: 'left',
         fontSize: 7,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: '100%',
         padding: 2,
-        border: '1px solid black',
+        border: '2px solid black',
         fontSize: 7,
         marginBottom: -5,
     },
@@ -96,14 +96,19 @@ const styles = StyleSheet.create({
         marginBottom: 2, 
         marginLeft: -2, 
     },
-    boxColumn: {
+    checkBox: {
         width: 10,
         height: 10,
         minHeight: 10,
         minWidth: 10,
-        border: '1px solid black',
-        marginHorizontal: 5,
-        marginTop: 1,
+        border: '2px solid black',
+        marginHorizontal: 3,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
     box4label2: {
         fontSize: 8,

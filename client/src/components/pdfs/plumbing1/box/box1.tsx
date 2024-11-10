@@ -6,13 +6,15 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
     // Dummy static data
     const defaultData = {
         labelData: 'John A. Doe',
-        checkboxData: 'yes',
+        cellData: '123412341234',
+        cellData2: '24682468',
+        cellData3: '123123123123',
+        checkboxData: 'N',
     };
 
     const data = { ...defaultData, ...permitInfo };
     
     return (
-    
         <View style={styles.formNo}>
             {/* Title Section */}
             <Text style={styles.formNo}>NBC FORM NO. A-06</Text>
@@ -46,7 +48,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 12 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -59,7 +61,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData2 ? data.cellData2[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -72,7 +74,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 12 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData3 ? data.cellData3[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>

@@ -2,6 +2,13 @@ import { View, Text } from '@react-pdf/renderer';
 import styles from '../styles/box10'; // Import the styles
 
 export function PermitBodyBox10({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <>
             <Text style={styles.title}>BOX 10</Text>
@@ -61,7 +68,7 @@ export function PermitBodyBox10({ permitInfo }: { permitInfo: any }) {
             
                 {/* Date*/}
                 <View style={styles.dateContainer}>
-                    <View style={styles.underline} />
+                <Text style={styles.blankLineDate}>{data.labelData || ' '} </Text>
                     <Text style={styles.date}>
                     DATE 
                     </Text>

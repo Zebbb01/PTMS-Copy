@@ -2,6 +2,13 @@ import { View, Text } from '@react-pdf/renderer';
 import styles from '../styles/box12';
 
 export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.container}>
             {/* Header */}
@@ -21,52 +28,70 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.column}>
                     <Text style={styles.sectionHeader}>A.1 Clearances/Certificates (from other Offices) - original with photo copy</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>DPWH clearance (if along National Highway) [Sec.302.12.b.i]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>Drainage Clearance (from DPWH/CEO) if required in the ECC</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>CEO Clearance (if along City/Brgy/Subdivision Road)</Text>
                     </View>
 
                     <Text style={styles.subsectionHeader}>B.2 Legal Documents (by Owner) (original with photo copy)</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>Certified True Copy of Land Title (from the Register of Deeds)</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>Certified True Copy of Tax Declaration of the property (from the City Assessor's Office) [Sec.302.a.2.ii]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>Certified True Copy of Current Real Property Tax Receipt (from the City Treasurer's Office) [Sec.302.a.2.iii]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>4</Text>
                         <Text style={styles.itemText}>Picture on Site with Landmarks</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>5</Text>
                         <Text style={styles.itemTextBrgy}>Barangay clearance of NO SITE CONFLICT</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>6</Text>
                         <Text style={styles.itemText}>Others</Text>
-                        <Text style={styles.underline}></Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     {/* Conditional Section */}
@@ -75,23 +100,33 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicNote}>(whichever is applicable) [Sec.302.b]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Deed of Absolute Sale</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Contract of Lease</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Contract of Sale</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Authority to Construct from the Lot Owner</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>And, Notarized Special Power of Attorney (SPA)</Text>
                     </View>
 
@@ -100,7 +135,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicCorporationUnderline}>Corporation:</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Secretary Certificate appointing the authorized person who will sign for and in behalf of the company</Text>
                     </View>
 
@@ -109,16 +146,22 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicNote}>If applicant is not the owner of lot (whichever is applicable) [Sec.302.b]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Association Board resolution</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Applicants Certificate of membership in that community Applicants Certificate of membership in that community
                         association</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>City Housing/NHA clearance (whichever is applicable)</Text>
                     </View>
 
@@ -126,7 +169,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                     <Text style={styles.subsectionHeader}>C ] Technical Documents (by owner and hired Professionals)</Text>
                         <Text style={styles.applicationHeader}>Application letter with duly filled-up forms of the following:</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>
                             Fence permit form with 3 sets of Civil/Architectural 
@@ -140,7 +185,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         signed and sealed by a licensed Civil Engineer
                     </Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>
                             Electrical permit form with 3 sets of Electrical Plans duly 
@@ -149,7 +196,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>
                             Sketch/lot plan with vicinity map drawn to scale signed and 
@@ -157,14 +206,18 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>4</Text>
                         <Text style={styles.itemText}>
                             Bill of materials and cost estimates (signed and sealed)[Sec.302]
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>5</Text>
                         <Text style={styles.itemText}>
                             Photo copy of Owners/Applicants valid I.D with three (3) 
@@ -172,7 +225,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>6</Text>
                         <Text style={styles.itemText}>
                             Photocopy of PRC IDs and current PTR and TIN of all the Signing 
@@ -199,12 +254,12 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.itemFooter}>
-                        <Text style={styles.itemText}>Name/Position:</Text>
-                        <Text style={styles.checklistUnderline}></Text>
+                        <Text style={styles.itemTextFooter}>Name/Position:</Text>
+                        <Text style={styles.blankLineFooter}>{data.labelData || ' '} </Text>
                     </View>
                     <View style={styles.itemFooter}>
-                        <Text style={styles.itemText}>Date/Time:</Text>
-                        <Text style={styles.checklistUnderline2}></Text>
+                        <Text style={styles.itemTextFooter}>Date/Time:</Text>
+                        <Text style={styles.blankLineFooter}>{data.labelData || ' '} </Text>
                     </View>
                 </View>
                 
@@ -218,52 +273,70 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.column}>
                     <Text style={styles.sectionHeader}>A.1 Clearances/Certificates (from other Offices) - original with photo copy</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>DPWH clearance (if along National Highway) [Sec.302.12.b.i]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>Drainage Clearance (from DPWH/CEO) if required in the ECC</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>CEO Clearance (if along City/Brgy/Subdivision Road)</Text>
                     </View>
 
                     <Text style={styles.subsectionHeader}>B.2 Legal Documents (by Owner) (original with photo copy)</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>Certified True Copy of Land Title (from the Register of Deeds)</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>Certified True Copy of Tax Declaration of the property (from the City Assessor's Office) [Sec.302.a.2.ii]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>Certified True Copy of Current Real Property Tax Receipt (from the City Treasurer's Office) [Sec.302.a.2.iii]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>4</Text>
                         <Text style={styles.itemText}>Picture on Site with Landmarks</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>5</Text>
                         <Text style={styles.itemTextBrgy}>Barangay clearance of NO SITE CONFLICT</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>6</Text>
                         <Text style={styles.itemText}>Others</Text>
-                        <Text style={styles.underline}></Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     {/* Conditional Section */}
@@ -272,23 +345,33 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicNote}>(whichever is applicable) [Sec.302.b]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Deed of Absolute Sale</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Contract of Lease</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Contract of Sale</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Authority to Construct from the Lot Owner</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>And, Notarized Special Power of Attorney (SPA)</Text>
                     </View>
 
@@ -297,7 +380,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicCorporationUnderline}>Corporation:</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Notarized Secretary Certificate appointing the authorized person who will sign for and in behalf of the company</Text>
                     </View>
 
@@ -306,16 +391,22 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         <Text style={styles.italicNote}>If applicant is not the owner of lot (whichever is applicable) [Sec.302.b]</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Association Board resolution</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>Applicants Certificate of membership in that community Applicants Certificate of membership in that community
                         association</Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemText}>City Housing/NHA clearance (whichever is applicable)</Text>
                     </View>
 
@@ -323,7 +414,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                     <Text style={styles.subsectionHeader}>C ] Technical Documents (by owner and hired Professionals)</Text>
                         <Text style={styles.applicationHeader}>Application letter with duly filled-up forms of the following:</Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>1</Text>
                         <Text style={styles.itemText}>
                             Fence permit form with 3 sets of Civil/Architectural 
@@ -337,7 +430,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         signed and sealed by a licensed Civil Engineer
                     </Text>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>2</Text>
                         <Text style={styles.itemText}>
                             Electrical permit form with 3 sets of Electrical Plans duly 
@@ -346,7 +441,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>3</Text>
                         <Text style={styles.itemText}>
                             Sketch/lot plan with vicinity map drawn to scale signed and 
@@ -354,14 +451,18 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>4</Text>
                         <Text style={styles.itemText}>
                             Bill of materials and cost estimates (signed and sealed)[Sec.302]
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>5</Text>
                         <Text style={styles.itemText}>
                             Photo copy of Owners/Applicants valid I.D with three (3) 
@@ -369,7 +470,9 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.item}>
-                        <Text style={styles.checkbox}></Text>
+                        <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                         <Text style={styles.itemNumber}>6</Text>
                         <Text style={styles.itemText}>
                             Photocopy of PRC IDs and current PTR and TIN of all the Signing 
@@ -396,12 +499,12 @@ export function PermitBodyBox12({ permitInfo }: { permitInfo: any }) {
                         </Text>
                     </View>
                     <View style={styles.itemFooter}>
-                        <Text style={styles.itemText}>Name/Position:</Text>
-                        <Text style={styles.checklistUnderline}></Text>
+                        <Text style={styles.itemTextFooter}>Name/Position:</Text>
+                        <Text style={styles.blankLineFooter}>{data.labelData || ' '} </Text>
                     </View>
                     <View style={styles.itemFooter}>
-                        <Text style={styles.itemText}>Date/Time:</Text>
-                        <Text style={styles.checklistUnderline2}></Text>
+                        <Text style={styles.itemTextFooter}>Date/Time:</Text>
+                        <Text style={styles.blankLineFooter}>{data.labelData || ' '} </Text>
                     </View>
                 </View>
             </View>

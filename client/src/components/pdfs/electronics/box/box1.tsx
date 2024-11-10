@@ -6,6 +6,9 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
      // Dummy static data
      const defaultData = {
         labelData: 'John A. Doe',
+        cellData: '123412341234',
+        cellData2: '24682468',
+        cellData3: '123123123123',
         checkboxData: 'Y',
     };
 
@@ -43,7 +46,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 10 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -56,7 +59,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -69,7 +72,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>

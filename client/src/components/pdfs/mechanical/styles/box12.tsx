@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         fontSize: 10,
     },
+    infoLabel: {
+        fontSize: 10,
+    },
     nameContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
@@ -47,17 +50,36 @@ const styles = StyleSheet.create({
         marginLeft: 5,
     },
     line: {
-        width: '28%',
+        color: '#FF0000',
+        textAlign: 'center',
         flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+        width: '28%',
     },
     
     footerLineGroup: {
+        width: '100%',
         flexDirection: 'row',
         marginTop: 10,
     },
-    footerLine: {
-        width: '35%',
+    footerLineText: {
+        width: 0,
         flexGrow: 1,
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 10,
+        marginHorizontal: 5,
+        borderBottomWidth: 1,
+    },
+    footerLine: {
+        width: '30%',
+        flexGrow: 1,
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 10,
+        marginHorizontal: 5,
+        borderBottomWidth: 1,
     },
     footerSubGroup: {
         fontSize: 8,
@@ -83,62 +105,101 @@ const styles = StyleSheet.create({
     equipmentContainer: {
         marginBottom: 2,
     },
+    equipmentRowSpace: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 5,
+    },
     equipmentRow: {
+        width: '100%',
         flexDirection: 'row',
         justifyContent: 'center',
         marginBottom: 5,
     },
     equipmentTitle: {
+        width: '100%',
+        textAlign: 'center',
         textDecoration: 'underline',
-        fontSize: 10,
-    },
-    equipmentTitleMargin: {
-        textDecoration: 'underline',
-        marginHorizontal: 120, // Adjusted for alignment
         fontSize: 10,
     },
     equipmentColumn: {
+        width: '100%',
         flexDirection: 'column',
         alignItems: 'flex-start',
         flex: 1,
     },
     equipmentColumn2: {
+        width: '100%',
         flexDirection: 'column',
         alignItems: 'center',
         flex: 1,
-        marginLeft: 20,
 
     },
     equipmentColumn3: {
+        width: '100%',
         flexDirection: 'column',
         alignItems: 'flex-start',
         flex: 1,
         marginTop: 2,
     },
     equipLine: {
-        width: '80%', // Adjusted width for better spacing
+        width: '100%', // Adjusted width for better spacing
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+        marginTop: 3,
     },
     equipLine2: {
-        width: '70%', // Adjusted width and alignment
+        width: '70%', // Adjusted width for better spacing
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+        marginTop: 3,
+    },
+    dataEquip: {
+        width: "100%", // Adjusted width for better spacing
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
     },
     equipmentLabel: {
         fontSize: 8,
-        textAlign: 'center',
+        textAlign: 'left',
         marginBottom: 3,
     },
     equipmentLabel2: {
+        width: '100%',
         fontSize: 8,
         textAlign: 'right',
         marginBottom: 5,
         left: 90,
     },
     footer: {
-        marginBottom: 2,
+        width: '100%',
+        flexDirection: 'row',
+        fontSize: 10,
+        marginTop: 15,
+    },
+    footerLabelContact: {
+        width: '100%',
+        textAlign: 'left',
         fontSize: 10,
     },
     footerLabel: {
-        marginLeft: 70,
+        textAlign: 'right',
         fontSize: 10,
+    },
+    footerLabelFirst: {
+        textAlign: 'right',
+        fontSize: 10,
+        marginLeft: 30,
     },
     footerLabel1: {
         textAlign: 'left',
@@ -175,20 +236,76 @@ const styles = StyleSheet.create({
         textDecoration: 'underline',
     },
     inspectionContainer: {
+        width: '100%',
         flexDirection: 'row',
         justifyContent: 'flex-end',
     },
-    inspectionContainer2: {
+    row: {
+        width: '100%',
         flexDirection: 'row',
     },
-    inspectionContainer3: {
+    column: {
+        width: '100%',
         flexDirection: 'column',
-        marginTop: 15,
     },
-    inspectionContainer4: {
+    rowCert: {
+        width: '100%',
         flexDirection: 'row',
-        marginTop: 15,
         justifyContent: 'space-between',
+    },
+    columnCert: {
+        width: '49%',
+        flexDirection: 'column',
+    },
+    columnFooter: {
+        width: '100%',
+        
+        flexDirection: 'column',
+    },
+    rowFooter: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+    },
+    data: {
+        width: 0,
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+    },
+    blankLine: {
+        width: '20%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+    },
+    blankLineCertificate: {
+        width: 0,
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+    },
+    blankLineCertificate2: {
+        width: '100%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
+    },
+    blankLineFooter: {
+        width: '50%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 10,
+        borderBottomWidth: 1,
     },
     inspectionLabel: {
         fontSize: 10,
@@ -205,12 +322,13 @@ const styles = StyleSheet.create({
     },
     inspectionLast2: {
         fontSize: 10,
-        width: '33%',
+        width: '50%',
         textAlign: 'center',
     },
     inspectionOfficial: {
+        width: '100%',
+        textAlign: 'center',
         fontSize: 10,
-        marginBottom:5,
     },
 });
 

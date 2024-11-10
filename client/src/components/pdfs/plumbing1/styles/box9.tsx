@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     header: {
         marginTop: 2,
         textAlign: 'center',
-        border: '1px solid black',
+        border: '2px solid black',
     },
     headerText: {
         margin: 3,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     headerRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        border: '1px solid black',
+        border: '2px solid black',
         borderBottom: 'none',
         marginTop: -1,
     },
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
         fontSize: 6,
         fontWeight: 'bold',
         textAlign: 'center',
-        borderLeft: '1px solid black',
-        borderRight: '1px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
         padding: 1,
     },
     headerOut: {
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 6,
         fontWeight: 'bold',
         textAlign: 'center',
-        borderRight: '1px solid black',
+        borderRight: '2px solid black',
         padding: 1,
     },
     headerRemarks: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     subHeaderRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        border: '1px solid black',
+        border: '2px solid black',
         borderTop: 'none',
         marginTop: -1,
     },
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderLeft: '1px solid black',
-        borderTop: '1px solid black',
+        borderLeft: '2px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateContainer2: {
@@ -102,9 +102,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderLeft: '1px solid black',
-        borderRight: '1px solid black',
-        borderTop: '1px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateContainer3: {
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderTop: '1px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
 
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     },
     emptyCell: {
         flexBasis: '20%',
-        borderRight: '1px solid black',
+        borderRight: '2px solid black',
         borderTop: 'none',
         fontSize: 6,
         fontWeight: 'bold',
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     
     dataCell: {
         flexBasis: '20%',
-        borderRight: '1px solid black',
+        borderRight: '2px solid black',
         borderTop: 'none',
         flexGrow: 1,
         color: '#FF0000',

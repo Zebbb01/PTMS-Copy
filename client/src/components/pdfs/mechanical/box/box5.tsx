@@ -3,6 +3,13 @@ import styles from '../styles/box5'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.formNo}>
             {/* Title Section */}
@@ -24,10 +31,12 @@ export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.row2}>
                         {/* Master Plumber label and line */}
                         <View style={styles.textLineContainer}>
-                            <View style={styles.line}></View>
+                        <Text style={styles.line}>{data.labelData || ' '}</Text>
                             <Text style={styles.labelOnLine}>(SIGNATURE OVER PRINTED NAME)</Text>
-                            <Text style={styles.labelDate}>Date</Text>
-                            <View style={styles.lineDate}></View>
+                            <View style={styles.row}>
+                                <Text style={styles.labelOnLine2}>Date</Text>
+                                <Text style={styles.lineDate}>{data.labelData || ' '}</Text>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -37,6 +46,7 @@ export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
             {/* Row Box 3 */}
             <View style={styles.container3}>
                 <Text style={styles.infoText}>ADDRESS:</Text>
+                <Text style={styles.data}>{data.labelData || ' '}</Text>
             </View>
             {/* End of Row Box 3 */}
 
@@ -45,6 +55,7 @@ export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.row3}>
                     <View style={styles.prcContainer}>
                         <Text style={styles.infoText2}>CTC No. </Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                     
                     {/* Vertical Line */}
@@ -52,6 +63,7 @@ export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer}>
                         <Text style={styles.infoText3}>Date Issued </Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
 
                     {/* Vertical Line */}
@@ -59,6 +71,7 @@ export function PermitBodyBox5({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer}>
                         <Text style={styles.infoText3}>Place Issued</Text>
+                        <Text style={styles.dataText}>{data.labelData || ' '}</Text>
                     </View>
                 </View>
             </View>

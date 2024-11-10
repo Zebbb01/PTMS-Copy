@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         paddingLeft: 5,
-        border: '1px solid black',
+        border: '2px solid black',
         borderBottom: 'none',
         flexDirection: 'column',
         fontSize: 6,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         paddingLeft: 6,
         paddingTop: 6,
         paddingBottom: 1,
-        border: '1px solid black',
+        border: '2px solid black',
         flexDirection: 'column',
         fontSize: 6,
     },
@@ -116,17 +116,17 @@ const styles = StyleSheet.create({
     },
     subRow: {
         width: "80%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     subRow2: {
         width: "100%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     subRow3: {
         width: "100%",
-        borderLeft: '1px solid black',
+        borderLeft: '2px solid black',
         paddingLeft: 10,
     },
     columnBox: {
@@ -217,14 +217,14 @@ const styles = StyleSheet.create({
     box: {
         width: 15,
         height: 20,
-        border: '1px solid black',
+        border: '2px solid black',
     },
     checkBox: {
         width: 10,
         height: 10,
         minHeight: 10,
         minWidth: 10,
-        border: '1px solid black',
+        border: '2px solid black',
         marginHorizontal: 3,
         marginTop: 1,
     }, 
@@ -287,13 +287,18 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     cell: {
-        border: '1px solid black',
+        border: '2px solid black',
         width: '8.3%', // Dividing 100% by 12 cells gives ~8.3%
         minWidth: '8.3%', // Adjust width as needed
         minHeight: 20, // Adjust height as needed
         height: 20, // Adjust height as needed
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    cellData: {
+        fontSize: 10,
+        textAlign: 'center',
+        color: '#FF0000',
     },
 });
 

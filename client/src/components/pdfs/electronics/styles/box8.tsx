@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
         fontSize: 6,
         fontWeight: 'bold',
         textAlign: 'center',
-        borderLeft: '1px solid black',
-        borderRight: '1px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
         padding: 1,
     },
     headerOut: {
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         fontSize: 6,
         fontWeight: 'bold',
         textAlign: 'center',
-        borderRight: '1px solid black',
+        borderRight: '2px solid black',
         padding: 1,
     },
     headerProcessedBy: {
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderLeft: '1px solid black',
-        borderTop: '1px solid black',
+        borderLeft: '2px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateContainer2: {
@@ -95,9 +95,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderLeft: '1px solid black',
-        borderRight: '1px solid black',
-        borderTop: '1px solid black',
+        borderLeft: '2px solid black',
+        borderRight: '2px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateContainer3: {
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderTop: '1px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateContainer4: {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center', // Keeps content centered when empty
         justifyContent: 'space-around',
-        borderTop: '1px solid black',
+        borderTop: '2px solid black',
         padding: 1,
     },
     timeDateTitle: {
@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
     
     emptyCell: {
         flexBasis: '25%',
-        borderRight: '1px solid black',
         borderTop: 'none',
         fontSize: 6,
         fontWeight: 'bold',

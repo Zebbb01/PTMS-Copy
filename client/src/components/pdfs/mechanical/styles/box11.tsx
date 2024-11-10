@@ -3,7 +3,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        fontSize: 12,
+        fontSize: 10,
     },
     title: {
         fontSize: 14,
@@ -11,111 +11,104 @@ const styles = StyleSheet.create({
         marginBottom: 15,
     },
     dateRow: {
+        width: '100%',
         flexDirection: 'row',
-        justifyContent: 'flex-end', // Aligns content to the right
-        alignItems: 'flex-end', // Aligns content to the right
+        textAlign: 'right',
         marginBottom: 15,
     },
-    date: {
+    dateLabel: {
+        fontSize: 10,
         textAlign: 'right',
-        fontSize: 12,
-        marginRight: 5, // Space between "Date:" label and date value
+        width: '100%',
     },
-    lineDate: {
+    blankLine: {
+        width: '15%',
         color: '#FF0000',
-        fontSize: 12,
-        textAlign: 'right',
+        textAlign: 'center',
+        fontSize: 8,
         borderBottomWidth: 1,
-        width: '12%', // Adjust width as necessary
     },
     recipient: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'left',
         marginBottom: 15,
         lineHeight: 1.5,
     },
     bodyContainer: {
-        fontSize: 12,
+        width: '100%',
+        fontSize: 10,
         marginTop: 15,
         marginBottom: 15,
     },
     lineGroup: {
-        width: '99%',
+        width: '100%',
         flexDirection: 'row',
-        alignItems: 'center',
-        marginTop: 15,
-    },
-    lineGroupFooter: {
-        width: '99%',
-        flexDirection: 'row',
-        alignItems: 'center',
         marginTop: 15,
     },
     label: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'right',
-        width: '7%',
-        paddingRight: 5,
+        width: '20%',
     },
     label2: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'right',
         width: '19%',
     },
     line: {
+        width: '60%',
         color: '#FF0000',
         textAlign: 'center',
-        flexGrow: 1,
-        fontSize: 12,
+        fontSize: 10,
         borderBottomWidth: 1,
         paddingLeft: 5,
     },
-    contactLine: {
+    signatureLine: {
+        width: '100%',
         color: '#FF0000',
         textAlign: 'center',
-        flexGrow: 1,
-        fontSize: 12,
+        fontSize: 10,
         borderBottomWidth: 1,
         paddingLeft: 5,
-        marginTop: 5,
     },
     subGroup: {
+        width: '100%',
         flexDirection: 'row',
-        alignContent: 'space-between',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
 
     },
     subLabel: {
-        fontSize: 12,
-        width: '27%',
+        fontSize: 10,
+        width: '30%',
         marginBottom: 10,
+        left: 75,
     },
     subLabel2: {
-        fontSize: 12,
+        fontSize: 10,
         width: '100%',
         textAlign: 'center',
     },
     subLabel3: {
-        fontSize: 12,
+        fontSize: 10,
         width: '100%',
         marginBottom: 5,
         textAlign: 'center',
     },
     bodyText: {
         textAlign: 'left',
-        fontSize: 12,
+        fontSize: 10,
         marginBottom: 10,
     },
     declarationContainer: {
         marginBottom: 30,
     },
     declarationFirstLine: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'justify',
         marginLeft: 33, // Adjust as needed for the left margin
     },
     declaration: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'justify',
     },
     signatureContainer: {
@@ -126,6 +119,14 @@ const styles = StyleSheet.create({
         width: '45%',
         fontSize: 8,
         textAlign: 'center',
+    },
+    underlineData: {
+        width: '100%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 10,
+        borderBottomWidth: 1,
+        paddingLeft: 5,
     },
 });
 

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         width: '100%',
-        border: '1px solid black',
+        border: '2px solid black',
         padding: 6,
         paddingBottom: -6,
     },
@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     columnFixtures: {
-        width: '48%',
-        left: 20,
+        width: '50%',
+        left: 27,
     },
     columnFixtures2: {
-        width: '48%',
-        left: 10,
+        width: '50%',
+        left: 15,
     },
     columnFixtures3: {
         width: '48%',
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     subTitle: {
-        width: '20%',
+        width: '15%',
         paddingHorizontal: 2,
         fontSize: 8,
         fontWeight: 'bold',
@@ -133,14 +133,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         bottom: 5,
     },
-    checkBoxText:{
-        width: 14,
+    checkBox: {
+        width: 10,
         height: 10,
         minHeight: 10,
-        minWidth: 14,
-        border: '1px solid black',
-        marginHorizontal: 5,
-        marginTop: 1,
+        minWidth: 10,
+        border: '2px solid black',
+        marginHorizontal: 3,
+        marginVertical: 0.6,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
 });
 

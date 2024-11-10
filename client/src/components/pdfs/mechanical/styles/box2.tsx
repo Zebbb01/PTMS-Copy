@@ -22,41 +22,55 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginLeft: 20,
     },
+    row:{
+        width: '100%',
+        flexDirection: 'row',
+    },
     column: {
         width: '50%', // Adjust width as needed for even columns
     },
     checkboxRow: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 1,
     },
-    checkbox: {
+    checkBox: {
         width: 10,
-        height: 8,
-        minwidth: 10,
-        minheight: 8,
-        border: '1px solid black',
-        marginRight: 6,
+        height: 10,
+        minHeight: 10,
+        minWidth: 10,
+        border: '2px solid black',
+        marginHorizontal: 3,
+        marginTop: 1,
+    }, 
+    checkBoxText: {
+        position: 'absolute',
+        color: '#FF0000',
+        fontSize: 8,               // Adjust the font size as needed
+        paddingLeft: 1,     // Center text horizontally
     },
-    checkbox2: {
-        width: 24,
-        height: 8,
-        minwidth: 24,
-        minheight: 8,
-        border: '1px solid black',
-        marginRight: 6,
+    blankLineData: {
+        width: '30%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
+        borderBottomWidth: 1,
     },
     checkboxLabel: {
-        width: '100%',
         fontSize: 6,
     },
-    underline: {
-        width: 230, // Adjust width to match the text
-        height: 1, // Thickness of the underline
-        backgroundColor: 'black',
-        marginTop: 5, // Adjust this to control the space between text and underline
-        alignSelf: 'center',
-        right: 10,
+    footerLabel: {
+        marginTop: 5,
+        fontSize: 6,
+    },
+    blankLineFooter: {
+        width: '45%',
+        color: '#FF0000',
+        textAlign: 'center',
+        fontSize: 8,
+        borderBottomWidth: 1,
     },
 });
 

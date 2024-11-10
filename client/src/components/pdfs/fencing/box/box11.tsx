@@ -2,6 +2,13 @@ import { View, Text } from '@react-pdf/renderer';
 import styles from '../styles/box11';
 
 export function PermitBodyBox11({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.container}>
             {/* Header */}
@@ -25,40 +32,46 @@ export function PermitBodyBox11({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.form}>
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Name of Applicant:</Text>
-                        <View style={styles.line} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                     
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Address:</Text>
-                        <View style={styles.line2} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Use or Type of Occupancy:</Text>
-                        <View style={styles.line3} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Project location:</Text>
-                        <View style={styles.line4} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Applicants Contact No.:</Text>
-                        <View style={styles.line5} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Name of Authorized Representative:</Text>
-                        <View style={styles.line6} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Authorized Representative Contact No.</Text>
-                        <View style={styles.line7} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                 </View>
 
@@ -66,40 +79,46 @@ export function PermitBodyBox11({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.form}>
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Name of Applicant:</Text>
-                        <View style={styles.line} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                     
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Address:</Text>
-                        <View style={styles.line2} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Use or Type of Occupancy:</Text>
-                        <View style={styles.line3} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Project location:</Text>
-                        <View style={styles.line4} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Applicants Contact No.:</Text>
-                        <View style={styles.line5} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Name of Authorized Representative:</Text>
-                        <View style={styles.line6} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
-                    <View style={styles.underline} />
+                    <View style={styles.labelRow}>
+                        <Text style={styles.blankLine2}>{data.labelData || ' '} </Text>
+                    </View>
 
                     <View style={styles.labelRow}>
                         <Text style={styles.label}>Authorized Representative Contact No.</Text>
-                        <View style={styles.line7} />
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                     </View>
                 </View>
             </View>

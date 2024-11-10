@@ -3,6 +3,16 @@ import styles from '../styles/box1'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        cellData: '123412341234',
+        cellData2: '24682468',
+        cellData3: '123123123123',
+        checkboxData: 'Y',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.formNo}>
             {/* Title Section */}
@@ -37,7 +47,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 11 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -50,7 +60,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -63,7 +73,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 11 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text>{permitInfo.cellData ? permitInfo.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -73,10 +83,12 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                      {/* Date Container */}
                     <View style={styles.dateContainer}>
                         <View style={styles.dateText}>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                             <Text style={styles.dateLabel}>DATE OF APPLICATION</Text>
                             {/* Data for DATE OF APPLICATION goes here */}
                         </View>
                         <View style={styles.dateText1}>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
                             <Text style={styles.dateLabel2}>DATE ISSUED</Text>
                             {/* Data for DATE ISSUED goes here */}
                         </View>
@@ -90,62 +102,108 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
             {/* Row Box 1 */}
             <View style={styles.container}>
                 {/* Row for NAME OF OWNER/APPLICANT */}
-                    <View style={styles.row}>
-                        <Text style={styles.label}>NAME OF OWNER/APPLICANT </Text>
-                        {/* Data for NAME OF OWNER/APPLICANT goes here */}
-                        <Text style={styles.label2}>LAST NAME, FIRST NAME, M.I.</Text>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.row}>
+                            <Text style={styles.label}>NAME OF OWNER/APPLICANT</Text>
+                            <Text style={styles.label}>LAST NAME, FIRST NAME, M.I.</Text>  
+                        </View>
                     </View>
-                    <View style={styles.line} />
-                    <View style={styles.row}>
-                        <Text style={styles.label3}>TAX I.D. NO</Text>
-                        {/* Data for TAX ACCT. NO goes here */}
+                    <View style={styles.subRow}>
+                        <Text style={styles.label}>TAX I.D. NO.</Text>
                     </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.row}>
+                        <Text style={styles.labelData}>{data.labelData || ' '} </Text>  
+                        <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                        </View>
+                    </View>
+                    <View style={styles.subRow}>
+                    <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                    </View>
+                </View>
             </View>
             {/* End of Row Box 1 */}
+
+            {/* Row Box 2 */}
+            <View style={styles.container}>
+                {/* Row for NAME OF OWNER/APPLICANT */}
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.subRow1}>
+                            <Text style={styles.label}>FOR CONSTRUCTION OWNED BY AN ENTERPRISE</Text>
+                        </View>
+                    </View>
+                    <View style={styles.subRow2}>
+                        <Text style={styles.label}>FORM OF OWNERSHIP</Text>
+                    </View>
+                    <View style={styles.subRow2}>
+                        <Text style={styles.label}>USE OR CHARACTER OF OCCUPANCY</Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.subRow1}>
+                        <Text style={styles.labelData}>{data.labelData || ' '} </Text>  
+                        </View>
+                    </View>
+                    <View style={styles.subRow2}>
+                    <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                    </View>
+                    <View style={styles.subRow2}>
+                    <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                    </View>
+                </View>
+            </View>
+            {/* End of Row Box 2 */}
+
             {/* Row Box 3 */}
             <View style={styles.container}>
                 {/* Row for NAME OF OWNER/APPLICANT */}
-                    <View style={styles.row}>
-                        <Text style={styles.label}>FOR CONSTRUCTION OWNED </Text>
-                        {/* Data for NAME OF OWNER/APPLICANT goes here */}
-                        
-                        <Text style={styles.label2}>FORM OF OWNERSHIP</Text>
-                    </View>
-                    <View style={styles.line2} />
-                    <View style={styles.line3} />
-                    <View style={styles.row}>
-                        <Text style={styles.label3}>USE OF CHARACTER OF OCCUPANCY</Text>
-                        {/* Data for TAX ACCT. NO goes here */}
-                    </View>
+                <View style={styles.row}>
                     <View style={styles.column}>
-                        <Text style={styles.box2label}>BY AN ENTERPRISE</Text>
+                        <View style={styles.row}>
+                            <Text style={styles.label}>ADDRESS</Text>
+                            <Text style={styles.label}>NO., STREET, BARANGAY, CITY/MUNICIPALITY/ ZIP CODE </Text>
+                        </View>
                     </View>
+                    <View style={styles.subRow3}>
+                            <Text style={styles.label}>TELEPHONE NO.</Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.row}>
+                            <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                            <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                        </View>
+                    </View> 
+                    <View style={styles.subRow3}>
+                        <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                    </View>
+                </View>
             </View>
             {/* End of Row Box 3 */}
 
-             {/* Row Box 3 */}
-             <View style={styles.container}>
+            {/* Row Box 4 */}
+            <View style={styles.container}>
                 {/* Row for NAME OF OWNER/APPLICANT */}
-                    <View style={styles.row}>
-                        <Text style={styles.label}>ADDRESS</Text>
-                        {/* Data for NAME OF OWNER/APPLICANT goes here */}
-                        <Text style={styles.label2}>NO., STREET, BARANGAY, CITY/MUNICIPALITY/ ZIP CODE</Text>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.row}>
+                            <Text style={styles.label}>LOCATION OF CONSTRUCTION</Text>
+                        </View>
                     </View>
-                    <View style={styles.line} />
-                    <View style={styles.row}>
-                        <Text style={styles.label3}>TELEPHONE NO.</Text>
-                        {/* Data for TAX ACCT. NO goes here */}
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.column}>
+                        <View style={styles.row}>
+                        <Text style={styles.labelData}>{data.labelData || ' '} </Text>
+                        </View>
                     </View>
-            </View>
-            {/* End of Row Box 3 */}
-
-            {/* Row Box 3 */}
-            <View style={styles.container4}>
-                    <View style={styles.row}>
-                        <Text style={styles.box3label}>LOCATION OF CONSTRUCTION : </Text>
-                        <Text style={styles.box3label2}>NO.STREET, BARANGAY, CITY/MUNICIPALITY</Text>
-                        {/* Data for NAME OF OWNER/APPLICANT goes here */}
-                    </View>
+                </View>
             </View>
             {/* End of Row Box 4 */}
             
@@ -158,81 +216,105 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                         {/* Create a flex row to arrange both sets side by side */}
                         <View style={styles.scopeOfWorkRow}>
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
-                            <View style={styles.scopeColumn4}>
+                            <View style={styles.scopeColumn1}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
-                                    <Text style={styles.box4label2}>NEW CONSTRUCTION</Text>
+                                    <Text style={styles.box4label1}>NEW CONSTRUCTION</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
-                                    <Text style={styles.box4label2}>ERECTION</Text>
+                                    <Text style={styles.box4label1}>ERECTION</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
-                                    <Text style={styles.box4label2}>ADDITION</Text>
+                                    <Text style={styles.box4label1}>ADDITION</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
-                                    <Text style={styles.box4label2}>ALTERATION</Text>
+                                    <Text style={styles.box4label1}>ALTERATION</Text>
                                 </View>
                             </View>
 
                             {/* Right column for RENOVATION, CONVERSION, etc. */}
-                            <View style={styles.scopeColumn5}>
+                            <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>RENOVATION</Text>
-                                    <View style={styles.underline} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>CONVERSION</Text>
-                                    <View style={styles.underline2} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>REPAIR</Text>
-                                    <View style={styles.underline3} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>MOVING</Text>
-                                    <View style={styles.underline4} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                             </View>
                              {/* Right column for RENOVATION, CONVERSION, etc. */}
-                             <View style={styles.scopeColumn6}>
+                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>RAISING</Text>
-                                    <View style={styles.underline5} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>DEMOLITION</Text>
-                                    <View style={styles.underline6} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>ACCESSORY BUILDING/STRUCTURE</Text>
-                                    <View style={styles.underline7} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                                 <View style={styles.rowOption2}>
-                                    <View style={styles.boxColumn2}></View>
+                                    <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                                     {/* Check RENOVATION box here */}
                                     <Text style={styles.box4label2}>OTHERS (specify)</Text>
-                                    <View style={styles.underline8} />
+                                    <Text style={styles.blankLineData}>{data.labelData || ' '} </Text>
                                 </View>
                             </View>
                         </View>
@@ -252,19 +334,27 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                     {/* First Column */}
                     <View style={styles.column6}>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>RESIDENTIAL</Text>
                         </View>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>COMMERCIAL</Text>
                         </View>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>INDUSTRIAL</Text>
                         </View>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>INSTITUTIONAL</Text>
                         </View>
                     </View>
@@ -272,17 +362,23 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                     {/* Second Column */}
                     <View style={styles.column6}>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>AGRICULTURAL</Text>
                         </View>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>LANDSCAPING</Text>
                         </View>
                         <View style={styles.checkboxRow}>
-                            <View style={styles.checkbox2}></View>
+                            <View style={styles.checkBox}>
+                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                                    </View>
                             <Text style={styles.checkboxLabel}>OTHER (SPECIFY)</Text>
-                            <View style={styles.underlineBox6} />
+                            <Text style={styles.blankLineData2}>{data.labelData || ' '} </Text>
                         </View>
                     </View>
                 </View>
