@@ -15,22 +15,7 @@ import { PermitBodyBox10 } from './plumbing1/box/box10';
 function PlumbingPermit() {
     // Define sample data for testing
     const [formData, setFormData] = useState({
-        firstName: 'John',
-        lastName: 'Doe',
-        middleInitial: 'A',
-        taxAccountNo: '123456789',
-        addressNo: '100',
-        street: 'Main St',
-        barangay: 'Barangay 1',
-        city: 'Cityville',
-        zipCode: '12345',
-        telNo: '555-1234',
-        ownedByEnterprise: 'Yes',
-        formOfOwnership: 'Sole Proprietorship',
-        location: 'Cityville, Lot 123',
-        tctNo: 'TCT-1234',
-        scopeOfWork: 'Residential Construction',
-        characterOccupancy: 'Single Family',
+
     });
 
     // Render the document
@@ -79,28 +64,36 @@ function PlumbingPermit() {
 // Define the actual PDF document layout here
 function MyPDFDocument({ formData }: { formData: any }) {
     return (
+        <>
         <Page size="A4" style={styles.page}>
-            <View style={styles.body1}>
+            <View style={styles.pageContainer}>
                 <PermitBodyBox1 permitInfo={formData} />
                 <PermitBodyBox2 permitInfo={formData} />
-                <PermitBodyBox3 permitInfo={formData} />
-                <View style={styles.box4}>
-                    <PermitBodyBox4 permitInfo={formData} />
-                </View>
-                <View style={styles.box5}>
-                    <PermitBodyBox5 permitInfo={formData} />
-                </View>
-                <View style={styles.box6}>
-                    <PermitBodyBox6 permitInfo={formData} />
-                </View>
-                <View style={styles.body2}>
+                 {/* Container for Box4 and Box6 */}
+                 <View style={styles.box4And6Container}>
+                        <View style={styles.box4}>
+                            <PermitBodyBox3 permitInfo={formData} />
+                            <PermitBodyBox5 permitInfo={formData} />
+                        </View>
+                        <View style={styles.box6}>
+                            <PermitBodyBox4 permitInfo={formData} />
+                            <PermitBodyBox6 permitInfo={formData} />
+                        </View>
+                    </View>
+                    {/* End Container */}
+            </View>
+        </Page>
+
+        <Page size="A4" style={styles.page}>
+            <View style={styles.pageContainer}>
                     <PermitBodyBox7 permitInfo={formData} />
                     <PermitBodyBox8 permitInfo={formData} />
                     <PermitBodyBox9 permitInfo={formData} />
                     <PermitBodyBox10 permitInfo={formData} />
                 </View>
-            </View>
         </Page>
+        </>
+        
     );
 }
 
@@ -111,33 +104,31 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     },
-    body1: {
+    pageContainer: {
+        width: '100%',
+        marginTop: 30,
+        paddingHorizontal: 20,
+    },
+    pageContainer2: {
         width: '100%',
         marginTop: 60,
         paddingHorizontal: 20,
     },
-    body2: {
+    box4And6Container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         width: '100%',
-        marginTop: 40,
+        marginTop: 2, // Adjust as needed
     },
     box4: {
-        marginTop: 11,
-        top: -121,
-        bottom: 0,
-        left: 290,
-        width: '100%',
-        position: 'relative',
-    },
-        box5: {
-        width: '100%',
-        marginTop: -118,
+        width: '48%', // Adjust the width to fit side by side
+        justifyContent: 'space-between',
+        // Optionally add padding or margin
     },
     box6: {
-        top: -89,
-        bottom: 0,
-        left: 290,
-        width: '100%',
-        position: 'relative',
+        width: '48%', // Adjust the width to fit side by side
+        justifyContent: 'space-between',
+        // Optionally add padding or margin
     },
 });
 

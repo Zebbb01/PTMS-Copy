@@ -3,10 +3,18 @@ import styles from '../styles/box8'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'yes',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
+    
     return (
         <View style={styles.mainContainer}>
             {/* Title Section */}
-            <Text style={styles.titleText}>BOX 7 (TO BE ACCOMPLISHED BY THE RECEIVING & RECORDING SECTION ) </Text>
+            <Text style={styles.titleText}>BOX 8 (TO BE ACCOMPLISHED BY THE RECEIVING & RECORDING SECTION ) </Text>
 
             {/* Row Box 3 */}
             <View style={styles.headerRow}>
@@ -53,34 +61,44 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
             {/* Row Box 5 */}
             <View style={styles.rowContainer}>
                 <View style={styles.contentRow}>
-                    <View style={styles.emptyColumn}></View>
+                    <View style={styles.emptyColumn}>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
+                    </View>
                     
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
                 </View>
             </View>
@@ -89,34 +107,44 @@ export function PermitBodyBox8({ permitInfo }: { permitInfo: any }) {
             {/* Row Box 6 */}
             <View style={styles.rowContainer}>
                 <View style={styles.contentRow}>
-                    <View style={styles.emptyColumn}></View>
+                    <View style={styles.emptyColumn}>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
+                    </View>
                     
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
 
                     {/* Vertical Line */}
                     <View style={styles.dividerLine} />
                     
                     <View style={styles.columnContainer}>
-                        <Text style={styles.centerText}></Text>
+                        <Text style={styles.centerText}>
+                            <Text style={styles.data}>{data.labelData || ' '}</Text>
+                        </Text>
                     </View>
                 </View>
             </View>

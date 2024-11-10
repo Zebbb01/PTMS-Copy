@@ -116,21 +116,41 @@ const styles = StyleSheet.create({
         padding: 1,
     },
 
-    timeDate: {
+    timeDateTitle: {
         fontSize: 6,
         fontWeight: 'bold',
         textAlign: 'center',
         paddingHorizontal: 5,
         minHeight: 8, // Sets a minimum height to prevent collapsing
     },
-    
+    timeDate: {
+        flexGrow: 1,
+        color: '#FF0000',
+        fontSize: 6,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        paddingHorizontal: 5,
+        minHeight: 8, // Sets a minimum height to prevent collapsing
+    },
     emptyCell: {
         flexBasis: '20%',
         borderRight: '1px solid black',
         borderTop: 'none',
         fontSize: 6,
         fontWeight: 'bold',
-        textAlign: 'left',
+        textAlign: 'center',
+    },
+
+    
+    dataCell: {
+        flexBasis: '20%',
+        borderRight: '1px solid black',
+        borderTop: 'none',
+        flexGrow: 1,
+        color: '#FF0000',
+        fontSize: 6,
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
 
     Cell: {

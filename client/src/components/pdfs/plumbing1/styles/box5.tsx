@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
     },
     container: {
         marginTop: 2,
-        width: '48%',
+        width: '100%',
         padding: 5,
         border: '1px solid black',
         borderBottom: 'none',
         fontSize: 6,
     },
     container2: {
-        width: '48%',
+        width: '100%',
         padding: 10,
         border: '1px solid black',
         borderTop: 'none',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     container3: {
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     },
     container4: {
         justifyContent: 'space-between',
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -115,9 +115,19 @@ const styles = StyleSheet.create({
     },
     line: {
         width: '100%',
-        height: 1, // thickness of the line
-        backgroundColor: 'black',
-        marginTop: 15, // Space above the line to ensure text fits properly
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 12,
+        borderBottomWidth: 1,
+    },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
     },
     verticalLine: {
         width: 1,

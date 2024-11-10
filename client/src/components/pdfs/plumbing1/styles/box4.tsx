@@ -21,6 +21,23 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         alignItems: 'flex-start',
     },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
+    },
+    data2:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'flex-start',
+         flexGrow: 1,
+         fontSize: 6,
+         top: 5,
+         left: 48,
+    },
     infoText2: {
         paddingTop: 4,
         fontSize: 6,
@@ -33,14 +50,14 @@ const styles = StyleSheet.create({
     },
     container: {
         marginTop: 2,
-        width: '48%',
+        width: '100%',
         padding: 5,
         border: '1px solid black',
         borderBottom: 'none',
         fontSize: 6,
     },
     container2: {
-        width: '48%',
+        width: '100%',
         padding: 10,
         border: '1px solid black',
         flexDirection: 'column',
@@ -49,7 +66,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     container3: {
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -60,7 +77,7 @@ const styles = StyleSheet.create({
     },
     container4: {
         justifyContent: 'space-between',
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -70,7 +87,7 @@ const styles = StyleSheet.create({
     },
     container5: {
         justifyContent: 'space-between',
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -80,7 +97,7 @@ const styles = StyleSheet.create({
     },
     container6: {
         justifyContent: 'space-between',
-        width: '48%',
+        width: '100%',
         marginTop: 3,
         padding: 2,
         border: '1px solid black',
@@ -107,10 +124,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     row2: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 6,
-        justifyContent: 'space-around', // Aligning items evenly
     },
     row3: {
         flexDirection: 'row',
@@ -147,19 +164,24 @@ const styles = StyleSheet.create({
         width: '100%', // Ensures the text is centered relative to the line
     },
     line: {
-        width: '160%',
-        height: 1, // thickness of the line
-        backgroundColor: 'black',
-        marginLeft: -13,
-        marginTop: 10, // Space above the line to ensure text fits properly
+        width: '140%',
+       color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 12,
+        borderBottomWidth: 1,
     },
-    line2: {
+    lineDate: {
+        left: 55,
         width: '60%',
-        height: 1,
-        backgroundColor: 'black',
-        marginTop: 10,
-        marginLeft: 50, // Space between the line and the text
-    },
+        color: '#FF0000',
+         textAlign: 'center',
+         flexGrow: 1,
+         fontSize: 12,
+         borderBottomWidth: 1,
+         paddingLeft: 5,
+     },
+
     verticalLine: {
         width: 1,
         marginTop: 2,
@@ -175,8 +197,7 @@ const styles = StyleSheet.create({
     },
     textLineContainer: {
         position: 'relative', // Ensures lines are positioned relative to text
-        width: '48%', // Ensures consistent width for alignment
-        marginLeft: 10, // Space between text and the next element
+        width: '100%', // Ensures consistent width for alignment
     },
     prcContainer: {
         flexGrow: 1, // Allow it to take the necessary space

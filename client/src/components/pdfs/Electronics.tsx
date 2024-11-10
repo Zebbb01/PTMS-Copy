@@ -1,68 +1,56 @@
 import { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import electronicsPDF from '../../../public/pdfs/electronics.pdf';
-import { AppliedServices } from '../../types/application';
+import { Document, PDFViewer, Page, StyleSheet, View, pdf } from '@react-pdf/renderer';
+import { saveAs } from 'file-saver';
+import { PermitBodyBox1 } from './electronics/box/box1';
+import { PermitBodyBox2 } from './electronics/box/box2';
+import { PermitBodyBox3 } from './electronics/box/box3';
+import { PermitBodyBox4 } from './electronics/box/box4';
+import { PermitBodyBox5 } from './electronics/box/box5';
+import { PermitBodyBox6 } from './electronics/box/box6';
+import { PermitBodyBox7 } from './electronics/box/box7';
+import { PermitBodyBox8 } from './electronics/box/box8';
+import { PermitBodyBox9 } from './electronics/box/box9';
+import { PermitBodyBox10 } from './electronics/box/box10';
 
-// Configure the PDF worker
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-function ElectronicsPDF({ setPermitsInfo }: { setPermitsInfo: React.Dispatch<React.SetStateAction<AppliedServices | undefined>> }) {
-    const [numPages, setNumPages] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(true);
+function ElectronicsPermit() {
+    // Define sample data for testing
+    const [formData, setFormData] = useState({
 
-    function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-        setNumPages(numPages);
-        setLoading(false);
-    }
+    });
 
-    function onLoadError(error: Error) {
-        console.error('Error loading page:', error);
-    }
+    // Render the document
+    const doc = (
+        <Document>
+            <MyPDFDocument formData={formData} />
+        </Document>
+    );
 
-    function downloadPDF() {
-        const link = document.createElement('a');
-        link.href = electronicsPDF;
-        link.download = 'electronics_permit_application.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
+    const downloadPDF = async () => {
+        const blob = await pdf(doc).toBlob();
+        saveAs(blob, 'electronics_permit.pdf');
+    };
 
     return (
         <>
             <div className="fixed top-0 w-full h-full bg-gray-800 opacity-75"></div>
-
-            <div className="flex w-full fixed top-0 justify-center items-center bg-red-800">
-                <div className="flex flex-col fixed top-3 items-center h-[95%] py-4 w-[55%] bg-white rounded-md">
-                    {loading && <div>Loading...</div>}
-
-                    <h1 className='font-bold text-3xl'>Electronics Permit Application</h1>
-
-                    <div className="max-w-screen-sm w-full h-[100%] overflow-auto">
-                        <Document file={electronicsPDF} onLoadSuccess={onDocumentLoadSuccess}>
-                            {Array.from(new Array(numPages), (_, index) => (
-                                <div key={`page_${index + 1}`} className="mb-4">
-                                    <Page
-                                        pageNumber={index + 1}
-                                        onLoadError={onLoadError}
-                                        renderAnnotationLayer={false}
-                                        renderTextLayer={false}
-                                    />
-                                </div>
-                            ))}
-                        </Document>
+            <div className="flex justify-center w-full h-full fixed top-0">
+                <div className="flex flex-col mt-3 items-center h-[95%] py-4 w-[55%] bg-white rounded-md">
+                    <h1 className='font-bold text-3xl mb-3'>Electronics Permit PDF</h1>
+                    <div className="max-w-screen-sm w-full h-full overflow-auto custom-scrollbar-small">
+                        <PDFViewer className='w-full h-full' showToolbar={false}>
+                            {doc}
+                        </PDFViewer>
                     </div>
-
                     <div className="flex flex-col items-center w-full gap-4 mt-5">
                         <button 
-                            onClick={downloadPDF}
+                            onClick={downloadPDF} 
                             className="w-[85%] bg-orange-500 hover:opacity-75 text-white font-bold py-2 px-4 rounded w-1/2"
                         >
                             Download PDF
                         </button>
-
                         <button 
-                            onClick={() => setPermitsInfo(undefined)}
+                            // onClick={() => setFormData({ /* Reset your state here */ })}
                             className='w-[85%] bg-black hover:opacity-75 text-white font-bold py-2 px-4 rounded w-1/2'
                         >
                             Close
@@ -74,4 +62,76 @@ function ElectronicsPDF({ setPermitsInfo }: { setPermitsInfo: React.Dispatch<Rea
     );
 }
 
-export default ElectronicsPDF;
+// Define the actual PDF document layout here
+function MyPDFDocument({ formData }: { formData: any }) {
+    return (
+        <>
+        <Page size="A4" style={styles.page}>
+            <View style={styles.pageContainer}>
+                <PermitBodyBox1 permitInfo={formData} />
+                <PermitBodyBox2 permitInfo={formData} />
+                 {/* Container for Box4 and Box6 */}
+                 <View style={styles.box4And6Container}>
+                        <View style={styles.box4}>
+                            <PermitBodyBox3 permitInfo={formData} />
+                            <PermitBodyBox5 permitInfo={formData} />
+                        </View>
+                        <View style={styles.box6}>
+                            <PermitBodyBox4 permitInfo={formData} />
+                            <PermitBodyBox6 permitInfo={formData} />
+                        </View>
+                    </View>
+                    {/* End Container */}
+            </View>
+        </Page>
+
+        <Page size="A4" style={styles.page}>
+            <View style={styles.pageContainer}>
+                    <PermitBodyBox7 permitInfo={formData} />
+                    <PermitBodyBox8 permitInfo={formData} />
+                    <PermitBodyBox9 permitInfo={formData} />
+                    <PermitBodyBox10 permitInfo={formData} />
+                </View>
+        </Page>
+        </>
+        
+    );
+}
+
+
+// Define styles for the PDF layout
+const styles = StyleSheet.create({
+    page: {
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    pageContainer: {
+        width: '100%',
+        marginTop: 30,
+        paddingHorizontal: 20,
+    },
+    pageContainer2: {
+        width: '100%',
+        marginTop: 60,
+        paddingHorizontal: 20,
+    },
+    box4And6Container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        marginTop: 2, // Adjust as needed
+    },
+    box4: {
+        width: '48%', // Adjust the width to fit side by side
+        justifyContent: 'space-between',
+        // Optionally add padding or margin
+    },
+    box6: {
+        width: '48%', // Adjust the width to fit side by side
+        justifyContent: 'space-between',
+        // Optionally add padding or margin
+    },
+});
+
+
+export default ElectronicsPermit;

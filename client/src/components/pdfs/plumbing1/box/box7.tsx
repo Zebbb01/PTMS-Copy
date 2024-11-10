@@ -3,11 +3,17 @@ import styles from '../styles/box7'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John A. Doe',
+        checkboxData: 'yes',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
     return (
         <View style={styles.formNo}>
             {/* Title Section */}
             <Text style={styles.printText}>BOX 7 (TO BE ACCOMPLISHED BY THE RECEIVING & RECORDING SECTION ) </Text>
-
 
 
             {/* Row Box 4 */}
@@ -15,6 +21,7 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                 <View style={styles.row3}>
                     <View style={styles.prcContainer}>
                         <Text style={styles.infoText2}>RECEIVED BY: </Text>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
                     </View>
                     
                     {/* Vertical Line */}
@@ -22,6 +29,7 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                     
                     <View style={styles.validityContainer}>
                         <Text style={styles.infoText3}>DATE: </Text>
+                        <Text style={styles.data}>{data.labelData || ' '}</Text>
                     </View>
                 </View>
             </View>
@@ -37,12 +45,16 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.boxColumn}>
+                                        {data.checkboxData || ' '}
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>Plumbing Plans & Specifications</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.boxColumn}>
+                                        {data.checkboxData || ' '}
+                                    </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>Bill of Materials </Text>
                                 </View>
@@ -54,15 +66,19 @@ export function PermitBodyBox7({ permitInfo }: { permitInfo: any }) {
                             {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
                             <View style={styles.scopeColumn}>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.boxColumn}>
+                                        {data.checkboxData || ' '}
+                                    </View>
                                     {/* Check NEW CONSTRUCTION box here */}
                                     <Text style={styles.box4label2}>Cost Estimates</Text>
                                 </View>
                                 <View style={styles.rowOption}>
-                                    <View style={styles.boxColumn}></View>
+                                    <View style={styles.boxColumn}>
+                                        {data.checkboxData || ' '}
+                                    </View>
                                     {/* Check ERECTION box here */}
                                     <Text style={styles.box4label2}>Others (Specify)</Text>
-                                    <View style={styles.boxLabelLine} />
+                                    <Text style={styles.boxLabelLine}>{data.labelData || ' '}</Text> 
                                 </View>
                             </View>
                     </View>

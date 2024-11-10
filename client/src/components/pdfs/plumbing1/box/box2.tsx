@@ -3,259 +3,242 @@ import styles from '../styles/box2'; // Import the styles
 
 // Define the permit layout component
 export function PermitBodyBox2({ permitInfo }: { permitInfo: any }) {
+
+    // Dummy static data
+    const defaultData = {
+        labelData: 'John ',
+        checkboxData: 'yes',
+    };
+
+    const data = { ...defaultData, ...permitInfo };
+
     return (
-        <View style={styles.formNo}>
-            <View style={styles.container}>
-                <Text style={styles.printText}>BOX 2 (TO BE ACCOMPLISHED BY THE DESIGNING PROFESSIONAL)</Text>
-            </View>
+        <>                
+        <Text style={styles.printText}>BOX 2 (TO BE ACCOMPLISHED BY THE DESIGNING PROFESSIONAL)</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>FIXTURES TO BE INSTALLED</Text>
+                <View style={styles.row}>
+                    <View style={styles.subTitleContainer}>
+                        <Text style={styles.subTitle}>QTY.</Text>
+                        <View style={styles.columnFixtures}>
+                            <Text style={styles.subTitleFixtures}>NEW</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                        <View style={styles.columnFixtures2}>
+                            <Text style={styles.subTitleFixtures}>EXISTING</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                        <View style={styles.columnFixtures3}>
+                            <Text style={styles.subTitleFixtures}>KIND OF</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                    </View>
+                    <View style={styles.subTitleContainer}>
+                        <Text style={styles.subTitle}>QTY.</Text>
+                        <View style={styles.columnFixtures}>
+                            <Text style={styles.subTitleFixtures}>NEW</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                        <View style={styles.columnFixtures2}>
+                            <Text style={styles.subTitleFixtures}>EXISTING</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                        <View style={styles.columnFixtures3}>
+                            <Text style={styles.subTitleFixtures}>KIND OF</Text>
+                            <Text style={styles.subTitleFixtures}>FIXTURES</Text>
+                        </View>
+                    </View>       
+                </View>
 
-            {/* Row Box 6 */}
-            <View style={styles.container3}>
-                {/* Row for FIXTURES TO BE INSTALLED */}
-                <View style={styles.boxStyleContainer2}>
+                    {/* First Fixtures Columns */}
+                <View style={styles.row}>
+                    <View style={styles.columnLine}>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                    </View>
                     <View style={styles.columnBox}>
-                        <Text style={styles.box4label}>FIXTURES TO BE INSTALLED</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnBox2}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnBox3}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnLabel}>
+                        <Text style={styles.columnLabelText}>Water Closet</Text>
+                        <Text style={styles.columnLabelText}>Floor Drain</Text>
+                        <Text style={styles.columnLabelText}>Lavatories</Text>
+                        <Text style={styles.columnLabelText}>Kitchen Sink</Text>
+                        <Text style={styles.columnLabelText}>Faucet</Text>
+                        <Text style={styles.columnLabelText}>Shower Head</Text>
+                        <Text style={styles.columnLabelText}>Water Meter</Text>
+                        <Text style={styles.columnLabelText}>Grease Trap</Text>
+                        <Text style={styles.columnLabelText}>Bath Tubs</Text>
+                        <Text style={styles.columnLabelText}>Slop Sink</Text>
+                        <Text style={styles.columnLabelText}>Urinal</Text>
+                        <Text style={styles.columnLabelText}>Airconditioning Unit</Text>
+                        <Text style={styles.columnLabelText}>Water Tank/reservoir</Text>
+                    </View>
 
-                        {/* Create a flex row to arrange both sets side by side */}
-                        <View style={styles.scopeOfWorkRow}>
-                            {/* Left column for NEW CONSTRUCTION, ERECTION, etc. */}
-                            <View style={styles.scopeColumn}>
-                                
-                                <View style={styles.rowOption}>
-                                    <Text style={styles.titlelabel}>QTY.</Text>
-                                    <View style={styles.titlelabelSplit1}>
-                                        <Text>NEW</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                    <View style={styles.titlelabelSplit2}>
-                                        <Text>EXISTING</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                    <View style={styles.titlelabelSplit3}>
-                                        <Text>KIND OF</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                    <Text style={styles.titlelabel2}>QTY.</Text>
-                                    <View style={styles.titlelabelSplit1}>
-                                        <Text>NEW</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                    <View style={styles.titlelabelSplit2}>
-                                        <Text>EXISTING</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                    <View style={styles.titlelabelSplit3}>
-                                        <Text>KIND OF</Text>
-                                        <Text>FIXTURES</Text>
-                                    </View>
-                                </View>
 
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Water Closet</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Bidet</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Floor Drain </Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Laundry Trays</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Lavatories</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Dental Cuspidator</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Kitchen Sink </Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Gas Heater</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Faucet</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Electric Heater</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Shower Head </Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Water Boiler</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Water Meter</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Drinking Fountain</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Grease Trap</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Bar Sink</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Bath Tubs</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Soda Fountain Sink</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Slop Sink</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Laboratory Sink</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Urinal </Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Sterilizer</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Airconditioning Unit</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label2}>Swimming Pool</Text>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.boxLabelLine}></View>
-                                    <View style={styles.boxColumn}></View>
-                                    <View style={styles.boxColumn2}></View>
-                                    <View style={styles.boxColumn3}></View>
-                                    <Text style={styles.boxlabel2}>Water Tank/reservoir</Text>
-                                    {/* This black line is aligned to the left of the first box */}
-                                    <View style={styles.box2LabelLine}></View>
-                                    <View style={styles.box2Column}></View>
-                                    <View style={styles.box2Column2}></View>
-                                    <View style={styles.box2Column3}></View>
-                                    <Text style={styles.box2label3}>R.C.S. volume</Text>
-                                    <View style={styles.box2label2line2}></View>
-                                </View>
-                                <View style={styles.rowOption}>
-                                    <View style={styles.boxLabelLine2}></View>
-                                    <Text style={styles.total}>TOTAL</Text>
-                                    <View style={styles.boxLabelLine3}></View>
-                                    <Text style={styles.total2}>TOTAL</Text>
-                                    <View style={styles.boxOther}></View>
-                                    <Text style={styles.boxOtherLabel}>Others (Specify)</Text>
-                                    <View style={styles.boxOtherLine}></View>
-                                </View>
-                                <View style={styles.rowOptionLast}>
-                                <View style={styles.boxColumnLast}></View>
-                                <Text style={styles.boxlLabelLast}>Water Closet</Text>
-                                <View style={styles.boxColumnLast}></View>
-                                <Text style={styles.boxlLabelLast}>Sanitary Sewer System</Text>
-                                <View style={styles.boxColumnLast}></View>
-                                <Text style={styles.boxlLabelLast}>Storage Drainage System</Text>
-                                </View>
-                            </View>
+                    {/* First Fixtures Columns */}
+                    <View style={styles.columnLine}>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                        <Text style={styles.blankLine}>{data.labelData || ' '} </Text>
+                    </View>
+                    <View style={styles.columnBox}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnBox2}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnBox3}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                    </View>
+                    <View style={styles.columnLabel}>
+                        <Text style={styles.columnLabelText}>Bidet</Text>
+                        <Text style={styles.columnLabelText}>Laundry Trays</Text>
+                        <Text style={styles.columnLabelText}>Dental Cuspidator</Text>
+                        <Text style={styles.columnLabelText}>Gas Heater</Text>
+                        <Text style={styles.columnLabelText}>Electric Heater</Text>
+                        <Text style={styles.columnLabelText}>Water Boiler</Text>
+                        <Text style={styles.columnLabelText}>Drinking Fountain</Text>
+                        <Text style={styles.columnLabelText}>Bar Sink</Text>
+                        <Text style={styles.columnLabelText}>Soda Fountain Sink</Text>
+                        <Text style={styles.columnLabelText}>Laboratory Sink</Text>
+                        <Text style={styles.columnLabelText}>Sterilizer</Text>
+                        <Text style={styles.columnLabelText}>Swimming Pool</Text>
+                        <View style={styles.row}>
+                            <Text style={styles.columnLabelText}>R.C.S. volume</Text>
+                            <Text style={styles.blankLineVolume}>{data.labelData || ' '} </Text>
+                        </View>
+                        <View style={styles.row}>
+                            <Text style={styles.columnLabelText}>Others (Specify)</Text>
+                            <Text style={styles.blankLineVolume}>{data.labelData || ' '} </Text>
                         </View>
                     </View>
                 </View>
-            </View>
-            {/* End of Row Box 6 */}
+                <View style={styles.row}>
+                    <View style={styles.totalContainer}>
+                        <Text style={styles.blankLineTotal}>{data.labelData || ' '} </Text>
+                        <Text style={styles.totalText}>TOTAL</Text>
+                    </View>
+                    <View style={styles.totalContainer}>
+                        <Text style={styles.blankLineTotal}>{data.labelData || ' '} </Text>
+                        <Text style={styles.totalText}>TOTAL</Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.lastContainer}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.lastText}>Water Distribution</Text>
+                    </View>
+                    <View style={styles.lastContainer}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.lastText}>Sanitary Sewer System</Text>
+                    </View>
+                    <View style={styles.lastContainer}>
+                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                        <Text style={styles.lastText}>Storage Drainage System</Text>
+                    </View>
+                </View>
         </View>
+        </>
     );
 }

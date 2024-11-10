@@ -44,6 +44,10 @@ import DisapprovedReleaserPage from "../pages/staff/releaser/Disapproved"
 import ApplicationReleaserPage from "../pages/staff/releaser/Application"
 import RetiredApplicationPage from "../pages/staff/receiver/RetiredApplication"
 import Plumbing1 from "../components/pdfs/Plumbing1"
+import Electronics from "../components/pdfs/Electronics"
+import Fencing from "../components/pdfs/Fencing"
+import Mechanical from "../components/pdfs/Mechanical"
+import SignagePermit from "../components/pdfs/Signage"
 
 
 
@@ -52,7 +56,7 @@ export const layoutPath = {
     path: "/layout",
     element:(
         <QueryProviderWrapper>
-            <Plumbing1 />
+            <SignagePermit />
         </QueryProviderWrapper>
     ),
 }

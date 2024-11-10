@@ -34,6 +34,13 @@ const styles = StyleSheet.create({
         fontSize: 5,
         textAlign: 'left',
     },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+    },
 
     container3: {
         width: '100%',
@@ -83,27 +90,31 @@ const styles = StyleSheet.create({
         width: '50%', // Adjust width for each column
     },
     rowOption: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 2, 
         marginLeft: -2, 
     },
     boxColumn: {
-        width: 6,
-        height: 8,
+        width: 10,
+        height: 10,
+        minHeight: 10,
+        minWidth: 10,
         border: '1px solid black',
-        marginHorizontal: 8,
+        marginHorizontal: 5,
+        marginTop: 1,
     },
     box4label2: {
-        width: '100%',
         fontSize: 8,
     },
     boxLabelLine: {
-        width: 190,
-        backgroundColor: 'black',
-        marginTop: 8,
-        height: 1,
-        marginLeft: -215,
+        width: '50%',
+        color: '#FF0000',
+        textAlign: 'center',
+        flexGrow: 1,
+        fontSize: 8,
+        borderBottomWidth: 1,
     },
     
 });

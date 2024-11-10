@@ -79,6 +79,13 @@ const styles = StyleSheet.create({
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
     },
+    data:{
+        position: 'absolute',
+        color: '#FF0000',
+         alignSelf: 'center',
+         flexGrow: 1,
+         fontSize: 6,
+    },
     centerText: {
         paddingTop: 0,
         fontSize: 5,
