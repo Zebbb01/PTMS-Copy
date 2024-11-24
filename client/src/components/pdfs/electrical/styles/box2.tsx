@@ -2,7 +2,7 @@ import { StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     formContainer: {
-        width: '95%',
+        width: '100%',
     },
     printText: {
         fontSize: 8,

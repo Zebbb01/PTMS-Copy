@@ -1,7 +1,7 @@
 import { View, Text } from '@react-pdf/renderer';
-import styles from '../styles/box6'; // Import the updated styles
+import styles from '../styles/box4'; // Import the updated styles
 
-export function PermitBodyBox6({ permitInfo }: { permitInfo: any }) {
+export function PermitBodyBox4({ permitInfo }: { permitInfo: any }) {
     // Dummy static data
     const defaultData = {
         labelData: 'John A. Doe',
@@ -11,7 +11,7 @@ export function PermitBodyBox6({ permitInfo }: { permitInfo: any }) {
     const data = { ...defaultData, ...permitInfo };
     return (
     <>
-    <Text style={styles.boxTitle}>BOX 6</Text>
+    <Text style={styles.boxTitle}>BOX 4</Text>
         <View style={styles.container}>
             
 

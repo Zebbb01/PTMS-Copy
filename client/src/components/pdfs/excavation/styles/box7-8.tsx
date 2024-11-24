@@ -5,8 +5,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'center',
-        width: '103%',
-        height: '9%',
+        width: '92%',
+        height: '35%',
+        marginTop: 10,
     },
 });
 

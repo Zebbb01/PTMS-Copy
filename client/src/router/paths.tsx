@@ -49,6 +49,9 @@ import Fencing from "../components/pdfs/Fencing"
 import Mechanical from "../components/pdfs/Mechanical"
 import SignagePermit from "../components/pdfs/Signage"
 import ElectricalPermit from "../components/pdfs/Electrical"
+import ServiceModalForm from "../components/modal/ServiceModalForm"
+import ExcavationPermit from "../components/pdfs/Excavation"
+import DemolitionPermit from "../components/pdfs/Demolition"
 
 
 
@@ -57,7 +60,7 @@ export const layoutPath = {
     path: "/layout",
     element:(
         <QueryProviderWrapper>
-            <ElectricalPermit />
+            <DemolitionPermit />
         </QueryProviderWrapper>
     ),
 }
