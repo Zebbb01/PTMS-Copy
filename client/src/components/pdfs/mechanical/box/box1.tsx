@@ -335,8 +335,8 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                     <View style={styles.column6}>
                         <View style={styles.checkboxRow}>
                             <View style={styles.checkBox}>
-                                        <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
-                                    </View>
+                                <Text style={styles.checkBoxText}>{data.checkboxData || ' '}</Text>
+                            </View>
                             <Text style={styles.checkboxLabel}>RESIDENTIAL</Text>
                         </View>
                         <View style={styles.checkboxRow}>

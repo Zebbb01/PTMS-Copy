@@ -59,7 +59,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData5 ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
@@ -72,7 +72,7 @@ export function PermitBodyBox1({ permitInfo }: { permitInfo: any }) {
                             {Array.from({ length: 8 }).map((_, index) => (
                                 <View key={index} style={styles.cell}>
                                     {/* Replace `permitInfo.cellData[index]` with actual data you want to display */}
-                                    <Text style={styles.cellData}>{data.cellData ? data.cellData[index] : ''}</Text>
+                                    <Text style={styles.cellData}>{data.cellData5 ? data.cellData[index] : ''}</Text>
                                 </View>
                             ))}
                         </View>
