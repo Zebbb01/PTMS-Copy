@@ -49,11 +49,11 @@ import Fencing from "../components/pdfs/Fencing"
 import Mechanical from "../components/pdfs/Mechanical"
 import SignagePermit from "../components/pdfs/Signage"
 import ElectricalPermit from "../components/pdfs/Electrical"
-import ServiceModalForm from "../components/modal/ServiceModalForm"
 import ExcavationPermit from "../components/pdfs/Excavation"
 import DemolitionPermit from "../components/pdfs/Demolition"
 import ElectricalCompletion from "../components/pdfs/completionForm/Electrical"
 import OccupancyCompletion from "../components/pdfs/completionForm/Occupancy"
+import OccupancyCertificate from "../components/pdfs/OccupancyCert"
 
 
 
@@ -62,7 +62,7 @@ export const layoutPath = {
     path: "/layout",
     element:(
         <QueryProviderWrapper>
-            <OccupancyCompletion />
+            <OccupancyCertificate />
         </QueryProviderWrapper>
     ),
 }
